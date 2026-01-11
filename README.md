@@ -29,12 +29,25 @@ uv pip install -e ".[dev]"
 
 # Create embeddings from .md files.
 
+Copy env.example to .env
+
+Fill in the values for the environment variables
+
+eg provider, api key if cloud, model name, etc.
+
+Set path to your markdown files
+
+Build docker image
+
 ```bash
-# Copy env.example to .env
-# Fill in the values for the environment variables
-# eg provider, api key if cloud, model name, etc.
-# Set path to your markdown files
-# Run the demo
+docker build -t qnsc .
+```
+
+docker-compose.yml
+
+Run the demo
+
+```bash
 uv run python examples/research_demo.py
 ```
 
